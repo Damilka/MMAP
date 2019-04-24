@@ -27,28 +27,35 @@ var row = "";
 var i;
 var numbers = [];
 
-//shuffle function for the array
-function shuffle(array) {
-  array.sort(() => Math.random() - 0.5);
-}
-
 //filling the array with nums
 for (i = 0; i < 16; i++){
 numbers.push(i);
 numbers.push(i);
 }
 
+//shuffle function for the array
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
 shuffle(numbers);
 
 //Generating the table
 for (i=0; i<8; i++) {
-row += "<td>" + numbers[i] + "</td>";
+row += "<td>" + "</td>";
 }
-	
 for (i = 0; i < 4; i++) {
 cols += "<tr>" + row + "</tr>";		
 }
 document.getElementById("demo").innerHTML = cols;
+
+//populate table
+i = 0;
+$( "td" ).each(function() {
+ $( this ).text(numbers[i]);
+ i += 1;
+  });
+
 
 
 
