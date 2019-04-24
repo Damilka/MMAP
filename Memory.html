@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="F:/Studium/Bachelor/Semester_6/Multimediaaplikationen/Hopfma_JavaScript/JQuery_3.4.Js"></script>
+<style>
+table {
+  border-collapse: collapse;
+    text-align: center;
+
+}
+td {
+  border: 1px solid black;
+  height: 100px; 
+  width: 100px
+}
+</style>
+</head>
+<body>
+
+<h2>Memory</h2>
+
+<table id="demo"></table>
+
+<script>
+var cols = "";
+var row = "";
+var i;
+var numbers = [];
+
+//shuffle function for the array
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+//filling the array with nums
+for (i = 0; i < 16; i++){
+numbers.push(i);
+numbers.push(i);
+}
+
+shuffle(numbers);
+
+//Generating the table
+for (i=0; i<8; i++) {
+row += "<td>" + numbers[i] + "</td>";
+}
+	
+for (i = 0; i < 4; i++) {
+cols += "<tr>" + row + "</tr>";		
+}
+document.getElementById("demo").innerHTML = cols;
+
+
+
+//Table Listener
+$("td").click(function(){
+$(this).append("x");
+});
+
+</script>
+
+</body>
+</html>
