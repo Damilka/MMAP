@@ -1,0 +1,46 @@
+<html>
+<head> 
+<style>
+
+#Q1A {
+display:none;
+
+}
+#Q2A {
+display:none;
+
+}
+#Q3A{
+display:none;
+
+}
+</style>
+</head>
+<body>
+<h1> check out answers </h1>
+
+<div id="Q1" onclick="myHandler()"> Why? </div>
+<div id="Q1A"> Because ! </div>
+
+<div id="Q2" onclick="myHandler()"> Foo? </div>
+<div id="Q2A"> Coding Joke </div>
+
+<div id="Q3" onclick="myHandler()"> Bar? </div>
+<div id="Q3A"> Coding Joke </div>
+
+<script src="JQuery_3.4.0.js"></script>
+
+<script>
+function myHandler () {
+var elementID = ($(this).attr('id')); + A;
+
+if (elementID.style.display === "none") {
+    elementID.style.display = "block";
+  } else {
+    elementID.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

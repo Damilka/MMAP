@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#area{
+width: 300px;
+height: 150px;
+border-style: solid;
+}
+include(
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test</title>
+</head>
+
+<body>
+<form>
+<input type="text" id="in" onchange="setColor()">
+<input type="button" onclick="setColor()" value="Set Color">
+</form>
+<br>
+<div id="area">
+</div>
+
+<script src="JQuery_3.4.0.js"></script>
+
+<script>
+function setColor(){
+var input = document.getElementById("in").value
+$("div").css("background-color", input);
+$("div").css("border-color", input);
+}
+</script>
+</body>
+</html>
