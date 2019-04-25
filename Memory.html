@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="F:/Studium/Bachelor/Semester_6/Multimediaaplikationen/Hopfma_JavaScript/JQuery_3.4.Js"></script>
+<script src="C:/Users/wentz/Studium/Semester_6/mmap/JQuery_3.4.Js"></script>
 <style>
 table {
   border-collapse: collapse;
@@ -13,9 +13,19 @@ td {
   height: 100px; 
   width: 100px
 }
+
+.open {
+}
+
+.out {
+ visibility: hidden;
+}
+
+
+
 </style>
 </head>
-<body>
+<body
 
 <h2>Memory</h2>
 
@@ -42,26 +52,45 @@ shuffle(numbers);
 
 //Generating the table
 for (i=0; i<8; i++) {
-row += "<td>" + "</td>";
+row += "<td>"+ "<div>"+ "</div>" + "</td>";
 }
 for (i = 0; i < 4; i++) {
 cols += "<tr>" + row + "</tr>";		
 }
-document.getElementById("demo").innerHTML = cols;
+
+//old
+<!-- document.getElementById("demo").innerHTML = cols; -->
+
+//new
+$("#demo").html(cols);
 
 //populate table
 i = 0;
-$( "td" ).each(function() {
- $( this ).text(numbers[i]);
- i += 1;
-  });
+$( "div" ).each(function() {
+$( this ).text(numbers[i]);
+i += 1;
+});
 
+//hide my memory cards
+$("div").hide();
 
-
+var cards = [];
 
 //Table Listener
 $("td").click(function(){
-$(this).append("x");
+$(this).find("div").show();
+<!-- $(this).find("div").addClass(".open"); -->
+cards.push($(this).find("div").value);
+
+var turns;
+
+if (cards.length == 3){
+	turns += 1;
+	$("div").hide();
+	cards = [];
+	$(this).find("div").show();
+	cards.push($(this).find("div").value);
+	}
 });
 
 </script>
