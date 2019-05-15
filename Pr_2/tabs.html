@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.inactiveTab {
+float:left;
+width: 24%;
+height: 25px;
+border: 1px solid black;
+text-align: center;
+}
+
+div.activeTab{
+float:left;
+width: 24%;
+height: 25px;
+border: 1px solid black;
+text-align: center;
+border-bottom-color: lightblue;
+background-color: lightblue;
+}
+
+.activeText {
+background-color: lightblue;
+float:left;
+}
+
+.inactiveText {
+display:none;
+}
+
+</style>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Test</title>
+</head>
+
+<body>
+<div id = "tab1" class="inactiveTab" onclick="one()">
+Tab 1 </div>
+
+<div id = "tab2" class="inactiveTab" onclick="two()">
+Tab 2 </div>
+
+<div id = "tab3" class="inactiveTab" onclick="three()">
+Tab 3 </div>
+
+<div id = "tab4" class="inactiveTab" onclick="four()">
+Tab 4</div>
+<br>
+<div id = "text1" class="inactiveText">
+1 Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+
+<div id = "text2" class = "inactiveText">
+2 Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+
+<div id = "text3" class = "inactiveText">
+3 Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+
+<div id = "text4" class = "inactiveText">
+4 Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+<script>
+
+function one(){
+clear();
+document.getElementById("tab1").className = "activeTab";
+document.getElementById("text1").className = "activeText";
+}
+
+function two(){
+clear();
+document.getElementById("tab2").className = "activeTab";
+document.getElementById("text2").className = "activeText";
+}
+
+function three(){
+clear();
+document.getElementById("tab3").className = "activeTab";
+document.getElementById("text3").className = "activeText";
+}
+
+function four(){
+clear();
+document.getElementById("tab4").className = "activeTab";
+document.getElementById("text4").className = "activeText";
+}
+
+function clear(){
+document.getElementById("tab1").className = "inactiveTab";
+document.getElementById("tab2").className = "inactiveTab";
+document.getElementById("tab3").className = "inactiveTab";
+document.getElementById("tab4").className = "inactiveTab";
+
+document.getElementById("text1").className = "inactiveText";
+document.getElementById("text2").className = "inactiveText";
+document.getElementById("text3").className = "inactiveText";
+document.getElementById("text4").className = "inactiveText";
+}
+</script>
+</body>
+</html>

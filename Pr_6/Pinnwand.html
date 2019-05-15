@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<head>
+<style>
+.sheet{
+background-color: yellow;
+width: 150px;
+height: 150px;
+float: left;
+padding: 10px;
+margin: 10px;
+}
+
+</style>
+</head>
+<body>
+<h1 id = "heading">16 notes for your use</h1>
+<div id = "container">
+
+</div>
+
+
+
+</body>
+<script>
+window.onload = function genNotes()
+{
+
+	for(var i = 0; i < 16; i++)
+	{
+		var note = document.createElement("div");
+		note.id = i;
+		note.className = "sheet"; 
+		document.body.appendChild(note);
+		note.contentEditable = "true";
+		
+		<!-- $.post ("/hash", { name: "/pinwand/Marciel/"+i, str: "Zettel "+i, store: 1 }); -->
+		<!-- $.post ("/hash", { name: "/pinwand/Marciel/"+i }, callback_func(i));		 -->
+	}
+	
+	<!-- callback_func(i, o) -->
+	<!-- { -->
+	<!-- $("#"+i).text(o.str) -->
+	<!-- } -->
+	
+	$("div" ).each(function() 
+	{
+		$(this).blur(function()
+		{
+		var elementID = $(this).attr('id');
+		<!-- $.post ("/hash", { name: "/pinwand/Marciel/"+ elementID, str: "Zettel "+i, store: 1 }); -->
+		});
+	});
+	
+}
+</script>
+</html>

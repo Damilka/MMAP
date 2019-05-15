@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<button type="button">Get Content</button>
+
+<div id="div1"><h1><h1></div>
+<div id="div2"><h1><h1></div>
+<div id="div3"><h1><h1></div>
+<div id="div4"><h1><h1></div>
+
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $.ajax({url: "lib/test.json", success: function(result){
+      $("#div1").html("Name: " + result.name);
+	  $("#div2").html("Tel. Nr.: " + result.telefon);
+      $("#div3").html("Alter: " + result.alter);
+      $("#div4").html("Hobbies: " + result.hobbies);
+
+    }});
+  });
+});
+</script>
+</head>
+<body>

@@ -1,0 +1,22 @@
+<html>
+<head> 
+<style></style>
+</head>
+<body>
+<h1> Form and Stuff</h1>
+<form>
+<input type="number" id="in" onchange="calculate()">
+<input type="button" onclick="calculate()" value="OK">
+</form>
+<p id = "res"> Bitte Zahl eingeben </p>
+
+<script>
+
+function calculate(){
+var input = document.getElementById("in").value
+document.getElementById("res").innerHTML = input * input;
+}
+</script>
+
+</body>
+</html>

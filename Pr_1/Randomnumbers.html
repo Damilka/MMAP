@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="F:/Studium/Bachelor/Semester_6/Multimediaaplikationen/Hopfma_JavaScript/JQuery_3.4.Js"></script>
+<style>
+
+</style>
+</head>
+<body>
+
+<h2>Random Numbers</h2>
+
+<p>Random numbers</p>
+
+<script>
+var nums =[];
+
+function shuffle(array) {
+  array.sort(() => Math.random() - 0.5);
+}
+
+for (var i=1; i<51; i++){
+nums.push(i);
+}
+
+shuffle(nums);
+
+$("p").click(function(){
+$("p").append(nums);
+});
+
+</script>
+
+</body>
+</html>
